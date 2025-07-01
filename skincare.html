@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SKINCARE - Mi Negocio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    /* Mismo estilo navbar y footer que antes */
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #fdf6f0;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background-color: #f3d9dc;
+      padding: 1.2rem 2rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Estilo para el link regresar */
+    .back-link {
+      color: #5e4b56;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      transition: color 0.3s ease;
+      user-select: none;
+    }
+    .back-link:hover {
+      color: #ff9aa2;
+    }
+    .back-link span {
+      font-size: 1.6rem;
+      margin-right: 0.3rem;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 500;
+      color: #5e4b56;
+      letter-spacing: 1px;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    main {
+      flex: 1 0 auto;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #5e4b56;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+    }
+
+    /* Grid cards */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #ffe9f0;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+      display: block;
+    }
+
+    .card-content {
+      padding: 1rem 1.5rem;
+    }
+
+    .card-content h3 {
+      margin: 0 0 0.5rem 0;
+      color: #5e4b56;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .card-content p {
+      margin: 0;
+      color: #6c5a63;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #2c2c2c;
+      color: #f0f0f0;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 2px solid #444;
+      font-family: 'Montserrat', sans-serif;
+      flex-shrink: 0;
+    }
+
+    .footer a {
+      color: #f0f0f0;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .footer a:hover {
+      color: #ff9aa2;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .card img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="back-link" aria-label="Regresar a página principal">
+        <span>←</span> Regresar
+      </a>
+      <h1 class="logo">Mi Negocio</h1>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Productos - SKINCARE</h2>
+
+    <div class="card-container">
+      <div class="card">
+        <img src="images/cepillo.jpeg" />
+        <div class="card-content">
+          <h3>True Glow</h3>
+          <p>Cepillo limpiador de cara.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/crema.jpeg" />
+        <div class="card-content">
+          <h3>Crumble Cookies</h3>
+          <p>Crema y Exfoliante Dove de Crumble Cookies.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/victorias.jpeg"/>
+        <div class="card-content">
+          <h3>Victoria's Secret</h3>
+          <p>Set de crema corporal Strawberries & Champagne y Body Spray Aqua kiss Victoria's Secret.</p>
+        </div>
+      </div>
+
+     
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>Mi Negocio</h3>
+      <p>Contáctanos por WhatsApp: <a href="https://wa.me/528441598119" target="_blank">+52 844 159 8119</a></p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank">🌐 Facebook</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
