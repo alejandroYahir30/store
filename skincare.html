@@ -1,32 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Mejor meta viewport para evitar zoom y scroll lateral -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>SKINCARE - Mi Negocio</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <style>
-    /* Mismo estilo navbar y footer que antes */
-    body {
-      margin: 0;
+    html, body {
+      margin: 0; padding: 0;
+      height: 100%;
+      overflow-x: hidden; /* evitar scroll horizontal */
       font-family: 'Playfair Display', serif;
       background-color: #fdf6f0;
       color: #333;
-      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    body {
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
 
     .navbar {
       background-color: #f3d9dc;
-      padding: 1.2rem 2rem;
+      padding: 1.2rem 1rem;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
       flex-shrink: 0;
       display: flex;
       align-items: center;
       gap: 1rem;
+      width: 100vw;
+      max-width: 100vw;
+      overflow-x: hidden;
+      box-sizing: border-box;
     }
 
     .back-link {
@@ -63,6 +71,7 @@
       max-width: 1200px;
       margin: 0 auto;
       width: 100%;
+      box-sizing: border-box;
     }
 
     h2 {
@@ -146,6 +155,10 @@
       border-top: 2px solid #444;
       font-family: 'Montserrat', sans-serif;
       flex-shrink: 0;
+      width: 100vw;
+      max-width: 100vw;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
 
     .footer a {
@@ -203,7 +216,7 @@
         <img src="images/victorias.jpeg" alt="Victoria's Secret" />
         <div class="card-content">
           <h3>Victoria's Secret</h3>
-          <p>Set de crema corporal Strawberries & Champagne y Body Spray Aqua kiss Victoria's Secret.</p>
+          <p>Set de crema corporal Strawberries &amp; Champagne y Body Spray Aqua kiss Victoria's Secret.</p>
         </div>
         <button class="btn-pedir">Pedir</button>
       </div>

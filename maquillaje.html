@@ -1,31 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Meta viewport con máximo zoom 1 para evitar zoom extraño -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>MAQUILLAJE - Mi Negocio</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   <style>
-    /* estilos (igual que antes) */
-    body {
-      margin: 0;
+    html, body {
+      margin: 0; padding: 0;
+      height: 100%;
+      overflow-x: hidden; /* Evitar scroll horizontal */
       font-family: 'Playfair Display', serif;
       background-color: #fdf6f0;
       color: #333;
-      min-height: 100vh;
+    }
+    body {
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
     .navbar {
       background-color: #f3d9dc;
-      padding: 1.2rem 2rem;
+      padding: 1.2rem 1rem;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
       flex-shrink: 0;
       display: flex;
       align-items: center;
       gap: 1rem;
+      width: 100vw;
+      max-width: 100vw;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
     .back-link {
       color: #5e4b56;
@@ -58,6 +65,7 @@
       max-width: 1200px;
       margin: 0 auto;
       width: 100%;
+      box-sizing: border-box;
     }
     h2 {
       text-align: center;
@@ -79,11 +87,21 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 1rem 1.5rem;
     }
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+      display: block;
+    }
+    .card-content {
+      padding: 1rem 1.5rem;
+      flex-grow: 1;
     }
     .card-content h3 {
       margin: 0 0 0.5rem 0;
@@ -120,6 +138,10 @@
       border-top: 2px solid #444;
       font-family: 'Montserrat', sans-serif;
       flex-shrink: 0;
+      width: 100vw;
+      max-width: 100vw;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
     .footer a {
       color: #f0f0f0;
@@ -132,8 +154,8 @@
       color: #ff9aa2;
     }
     @media (max-width: 600px) {
-      .card {
-        padding: 1rem;
+      .card img {
+        height: 150px;
       }
     }
   </style>
@@ -151,14 +173,16 @@
 
     <div class="card-container">
       <div class="card" data-name="Brochas Real Techniques">
+        <img src="images/brochas.jpeg" alt="Brochas Real Techniques" />
         <div class="card-content">
-          <h3>Brochas Real Techniques.</h3>
+          <h3>Brochas Real Techniques</h3>
           <p>Set de 3 brochas de maquillaje.</p>
         </div>
         <button class="btn-pedir">Pedir</button>
       </div>
 
       <div class="card" data-name="Rimel Lashglam">
+        <img src="images/lashglam.jpeg" alt="Rimel Lashglam" />
         <div class="card-content">
           <h3>Rimel Lashglam</h3>
           <p>Set de 3 Rimel con cepillo diferente.</p>
@@ -167,6 +191,7 @@
       </div>
 
       <div class="card" data-name="Miracle Pill">
+        <img src="images/miracle.jpeg" alt="Miracle Pill" />
         <div class="card-content">
           <h3>Miracle Pill</h3>
           <p>Set de 4 Lip Oil Miracle Pill.</p>
@@ -175,6 +200,7 @@
       </div>
 
       <div class="card" data-name="Set Bebe">
+        <img src="images/bebe.jpeg" alt="Set Bebe" />
         <div class="card-content">
           <h3>Set Bebe</h3>
           <p>Set de maquillaje para pestañas Bebe.</p>
